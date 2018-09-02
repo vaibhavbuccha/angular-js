@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="">
+            <p>Name: <input type="text" ng-model="name" placeholder="enter your name"></p>
+            <p>addres: <input type="text" ng-model="address" placeholder="enter your address"></p>
+            <p>number: <input type="text" ng-model="number" placeholder="enter your number"></p>
+            <input type="submit" onclick="document.getElementById('a').style.display= 'block'">
+            <div id="a" style="display: none;">
+                <h3>my name is {{ name }}</h3>
+                <h3>my address is {{ address }}</h3>
+                <h3>my number is {{ number }}</h3>
+            </div>
+            <div ng-app="myapp" ng-init="mycol='yellow'">
+                <p>enter your favourate color</p>
+                <input  style="background-color:{{ ssmycol}}" ng-model="mycol" >
+            </div>
+            <div ng-app="currency_converter" ng-init="dollar='1'">
+                <p>
+                    dollar : <input type="number" {{dollar}} >  rupees : <input type="number" {{ dollar*67 }}>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

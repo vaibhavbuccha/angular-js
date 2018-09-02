@@ -1,0 +1,37 @@
+
+<html>
+    <head>
+        <title>
+
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <!--
+    <body>
+       <div data-ng-app="" data-ng-init="quantity=1;cost=70">
+           <h1>dolar to indian rupees converter</h1>
+            quantity: <input type="number" ng-model="quantity">
+            cost of dollar: <input type="number" ng-model="cost">
+            <p>price in indian rupees is: {{quantity * cost}}</p>
+       </div>
+       
+    </body>
+    -->
+    <!--currency calculater using module-->
+    <body>
+        <div data-ng-app="calculater" ng-controller="myctrl">
+            <h3>currency converter</h3>
+            quantity: <input type="number" ng-model="quantity">
+            dollar rate:<input type="number" ng-model="cost">
+            <p>prince in indian rupees:{{quantity * cost}}</p>
+        </div>
+        <script>
+        var app = angular.module("calculater", []);
+        app.controller ("myctrl", function($scope){
+            $scope.quantity = 1;
+            $scope.cost = 70;
+        })
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>demo of angularjs</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    </head>
+    <body>
+        <!--      
+            <div ng-app="">
+            <h3>sample of angular directives</h3>
+            <p><input type="text" ng-model="name"></p>
+            <p>hello {{ name }} </p>
+        </div>
+        -->
+        <div ng-app="1">
+                <table border="1">
+                    <tr>
+                        <td><input type="checkbox" ng-model="enabedisable">enabedisable</td>
+                        <td><button ng-disabled="enabedisable">click me!</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" ng-model="showhide">showhide</td>
+                        <td><button ng-show="showhide">click me!</button></td>
+                    </tr>
+                    <tr>
+                        <td> <p>total click: {{ clickcounter }} </p></td>
+                        <td><button ng-click="clickcounter = clickcounter + 1">click me</button></td>
+                    </tr>
+                </table>
+        </div>
+    </body>
+</html>
