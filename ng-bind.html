@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myapp" ng-controller="myctrl">
+            <h1 ng-click="changename()">{{name}}</h1>
+            <p>
+                click on the name to chane the name!!
+            </p>
+        </div>
+        <script>
+        var app = angular.module("myapp",[]);
+        app.controller("myctrl",function($scope){
+            $scope.name = "Aman";
+            $scope.changename = function(){
+                $scope.name = "vaibhav";
+            }
+        }); 
+        </script>
+    </body>
+</html>
